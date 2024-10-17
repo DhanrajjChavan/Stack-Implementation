@@ -9,26 +9,22 @@ class Stack
     int top;
     int* arr;
 
-    // Constructor to initialize stack
     Stack(int capacity) 
     {
         this->capacity = capacity;
         arr = new int[capacity];
-        top = -1; // Stack is initially empty
+        top = -1; 
     }
 
-    // Destructor to free memory
     ~Stack() 
     {
-    delete[] arr; // Deallocate memory
+    delete[] arr;
     }
 
-    // Push method to add element to the stack
     void push(int element) 
     {
         if (top < capacity - 1) 
         {
-         // Check if stack is not full
             top++;
             arr[top] = element;
         } 
@@ -38,7 +34,6 @@ class Stack
         }
     }
 
-    // Pop method to remove the top element from the stack
     void pop() 
     {
         if (top >= 0) 
@@ -51,7 +46,6 @@ class Stack
         }
     }
 
-    // Peek method to get the top element of the stack
     int peek() 
     {
         if (top >= 0) 
@@ -60,7 +54,7 @@ class Stack
         } 
         else 
         {
-            return -1; // Indicate that the stack is empty
+            return -1; 
         }
     }
 };
@@ -72,9 +66,9 @@ int main()
     st.push(24);
     st.push(25);
 
-    cout<<st.peek() <<endl; // Output: 25
+    cout<<st.peek() <<endl; 
     st.pop();
-    cout<<st.peek() <<endl; // Output: 24
+    cout<<st.peek() <<endl; 
 
     return 0;
 }
