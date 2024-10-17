@@ -10,7 +10,6 @@ int main()
     st.push(20);
     st.push(10);
 
-    // Print the top element of the stack
     cout<< "Top element of the stack: " <<st.top() <<endl;
 }
 
